@@ -1,0 +1,134 @@
+:root {
+  --primary-green: #28f200;
+  --primary-font-color: #4c4b4c;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  background-color: blue;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  border: 1px solid yellow;
+  font-size: 1.6rem;
+  overflow-x: hidden;
+  font-weight: 400;
+  color: var(--primary-font-color);
+
+  /* min-height: 100vh; */
+  background-color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  font: inherit;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+.header {
+  background-color: #fff;
+  padding: 1.2rem 0;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.logo-wrapper img {
+  width: 12.4rem;
+}
+
+.logo-wrapper span {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.2rem;
+  color: var(--primary-green);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .nav-list {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-list a {
+  border: 1px solid red;
+  padding: 0.8rem 1rem;
+}
+
+.hero {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 6.4rem 0;
+
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: #44ff00; */
+}
+
+.hero-text-wrapper {
+  flex: 1;
+}
+
+.hero h1 {
+  font-size: 6.4rem;
+}
+
+.cta {
+  padding: 2.4rem 3.2rem;
+  /* background-image: linear-gradient(
+    105deg,
+    rgb(86, 39, 173) 29%,
+    rgb(10, 255, 22) 78%
+  ); */
+  background-color: rgb(86, 39, 173);
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.hero-img-wrapper {
+  /* border: 1px solid red; */
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.hero-img-wrapper img {
+  width: 36rem;
+
+  /* border: 1px solid green; */
+}
