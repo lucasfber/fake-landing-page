@@ -1,6 +1,7 @@
 :root {
   --primary-green: #28f200;
   --primary-font-color: #4c4b4c;
+  --secondary-color: #5627ad;
 }
 
 *,
@@ -46,7 +47,8 @@ img {
 
 .header {
   background-color: #fff;
-  padding: 1.2rem 0;
+  padding: 1.6rem 0;
+  box-shadow: 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 .logo-wrapper {
@@ -75,16 +77,42 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 10rem;
 }
 
 .header .nav-list {
   display: flex;
+  justify-content: space-between;
   gap: 1rem;
 }
 
 .nav-list a {
-  border: 1px solid red;
   padding: 0.8rem 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #5c6077;
+}
+
+.list-items-wrapper {
+  display: flex;
+  gap: 2rem;
+  margin-left: 5rem;
+}
+
+.nav-list a.btn-quero-testar {
+  background-color: var(--secondary-color);
+  border: 1px solid transparent;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 1rem 1.2rem;
+}
+
+.nav-list a.btn-login {
+  background-color: transparent;
+  border: 1px solid #5c6077;
+  color: #5c6077;
+  border-radius: 0.5rem;
+  padding: 1rem 1.2rem;
 }
 
 .hero {
@@ -114,11 +142,16 @@ img {
     rgb(86, 39, 173) 29%,
     rgb(10, 255, 22) 78%
   ); */
-  background-color: rgb(86, 39, 173);
+  background-color: var(--secondary-color);
   border-radius: 20px;
   color: #fff;
   font-weight: 600;
   font-size: 2rem;
+  transition: transform 500ms ease;
+}
+
+.cta:hover {
+  transform: translateY(2px);
 }
 
 .hero-img-wrapper {
