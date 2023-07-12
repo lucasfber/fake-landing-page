@@ -8,28 +8,29 @@
 *::before,
 *::after {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
   font-size: 62.5%;
-  background-color: blue;
 }
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-
-  border: 1px solid yellow;
   font-size: 1.6rem;
   overflow-x: hidden;
   font-weight: 400;
   color: var(--primary-font-color);
-
   /* min-height: 100vh; */
-  background-color: #fff;
 }
 
 ul {
   list-style: none;
+}
+
+li {
+  display: block;
 }
 
 a {
@@ -40,20 +41,54 @@ a {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
   display: block;
   height: auto;
 }
 
-.header {
-  background-color: #fff;
-  padding: 1.6rem 0;
-  box-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+h1 {
+  line-height: 1;
 }
 
 .logo-wrapper {
   display: flex;
   align-items: center;
+}
+
+.header {
+  background-color: #fff;
+  box-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* .header-container {
+  max-width: 130rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} */
+
+.header-content {
+  overflow: hidden;
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1.6rem 0;
 }
 
 .logo-wrapper img {
@@ -68,82 +103,124 @@ img {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.container {
-  max-width: 120rem;
-  margin: 0 auto;
+.primary-navigation {
+  position: absolute;
+  z-index: 1000;
+  top: 8.1rem;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  padding: 4rem 0 0 0;
+  opacity: 0;
+  transition: all 500ms ease;
+  transform: translateX(110%);
+  background-color: #fff;
 }
 
-.header .container {
+ion-icon {
+  color: var(--primary-font-color);
+}
+
+.btn-menu .btn-toggle[name="close-sharp"] {
+  display: none;
+}
+
+.btn-menu.close .btn-toggle[name="close-sharp"] {
+  display: block;
+}
+
+.btn-menu.close .btn-toggle[name="menu-sharp"] {
+  display: none;
+}
+
+.primary-navigation.close {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.nav-list {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 10rem;
-}
-
-.header .nav-list {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
+  gap: 0.2rem;
 }
 
 .nav-list a {
-  padding: 0.8rem 1rem;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 500;
   color: #5c6077;
+  padding: 1rem 2rem;
 }
 
-.list-items-wrapper {
+.action-buttons-wrapper {
+  margin-top: 3rem;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 2rem;
-  margin-left: 5rem;
 }
 
-.nav-list a.btn-quero-testar {
+.action-buttons-wrapper a.btn-quero-testar {
   background-color: var(--secondary-color);
   border: 1px solid transparent;
   color: white;
   border-radius: 0.5rem;
-  padding: 1rem 1.2rem;
+  padding: 1.6rem;
+  width: 150px;
+  text-align: center;
 }
 
-.nav-list a.btn-login {
+.action-buttons-wrapper a.btn-login {
   background-color: transparent;
   border: 1px solid #5c6077;
   color: #5c6077;
   border-radius: 0.5rem;
-  padding: 1rem 1.2rem;
+  padding: 1.6rem;
+  width: 150px;
+  text-align: center;
+}
+
+section {
+  padding: 4rem 0;
 }
 
 .hero {
-  max-width: 120rem;
-  margin: 0 auto;
-  padding: 6.4rem 0;
+  margin-top: 8.1rem;
+}
 
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: space-between;
-  /* background-color: #44ff00; */
+.hero-content {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 3.8rem;
 }
 
 .hero-text-wrapper {
   flex: 1;
 }
 
-.hero h1 {
-  font-size: 6.4rem;
+.hero-text-wrapper p {
+  margin-top: 2rem;
+}
+
+.hero-text-wrapper span {
+  font-weight: 700;
+  color: var(--secondary-color);
 }
 
 .cta {
-  padding: 2.4rem 3.2rem;
+  margin-top: 2rem;
+  padding: 2rem 3rem;
   /* background-image: linear-gradient(
     105deg,
     rgb(86, 39, 173) 29%,
     rgb(10, 255, 22) 78%
   ); */
   background-color: var(--secondary-color);
-  border-radius: 20px;
+  border-radius: 8px;
   color: #fff;
   font-weight: 600;
   font-size: 2rem;
@@ -152,6 +229,20 @@ img {
 
 .cta:hover {
   transform: translateY(2px);
+}
+
+.active-users {
+  margin-top: 4rem;
+}
+
+.active-users p {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.active-users img {
+  max-width: 10rem;
 }
 
 .hero-img-wrapper {

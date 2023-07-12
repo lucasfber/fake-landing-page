@@ -8,40 +8,69 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
+      <div class="header-content">
         <div class="logo-wrapper">
           <img src="assets/img/logo.svg" alt="Logo Lucrei Cashback" />
         </div>
 
-        <nav>
+        <button class="btn-menu">
+          <ion-icon
+            class="btn-toggle"
+            name="menu-sharp"
+            size="large"
+          ></ion-icon>
+          <ion-icon
+            class="btn-toggle"
+            name="close-sharp"
+            size="large"
+          ></ion-icon>
+        </button>
+
+        <nav class="primary-navigation">
           <ul class="nav-list">
             <li><a href="#">Nossos Planos</a></li>
             <li><a href="#">Nosso blog</a></li>
             <li><a href="#">Contato</a></li>
-            <li><a href="#">Sobre</a></li>
-            <div class="list-items-wrapper">
-              <li><a href="#" class="btn-login">Login</a></li>
-              <li><a href="#" class="btn-quero-testar">Quero testar!</a></li>
-            </div>
+            <li>
+              <a href="#">Sobre </a>
+            </li>
           </ul>
+          <div class="action-buttons-wrapper">
+            <a href="#" class="btn-login">Login</a>
+            <a href="#" class="btn-quero-testar">Quero testar!</a>
+          </div>
         </nav>
       </div>
     </header>
-    <section class="hero">
-      <div class="hero-text-wrapper">
-        <h1>Fidelize seus clientes</h1>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, ad?
-        </p>
-        <a href="#" class="cta">Inicie hoje!</a>
-        <div class="active-users">
-          <img src="./assets/img/newclients.png" alt="Active users" />
-          <p>+1k Usuários Cadastrados</p>
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <div class="hero-text-wrapper">
+            <h1>Fidelize seus clientes</h1>
+            <p>
+              Te auxiliamos na <span>fidelização</span>,
+              <span>marketing</span> e no <span>pós venda</span>.
+            </p>
+            <a href="#" class="cta">Comece agora!</a>
+            <div class="active-users">
+              <img src="./assets/img/newclients.png" alt="Active users" />
+              <p>+1k Usuários Cadastrados</p>
+            </div>
+          </div>
+          <!-- <div class="hero-img-wrapper">
+            <img src="assets/img/payment.svg" />
+          </div> -->
         </div>
-      </div>
-      <div class="hero-img-wrapper">
-        <img src="assets/img/payment.svg" />
-      </div>
-    </section>
+      </section>
+    </main>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>
